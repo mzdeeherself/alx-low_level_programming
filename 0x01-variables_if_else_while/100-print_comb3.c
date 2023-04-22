@@ -8,19 +8,21 @@ int main(void)
 	int n;
 	int a;
 
-	for (n = 48; n <= 56; n++)
+	for (n = 48; n <= 57; n++)
 	{
-		if (a > n)
+		for (a = n + 1; a <= 57; a++)
 		{
-			putchar(n);
-			putchar(a);
-			if (n != 56 || a != 57)
+			if (a != n)
 			{
+				putchar(n);
+				putchar(a);
+				if (n == 56 && a == 57)
+				continue;
 				putchar(',');
 				putchar(' ');
 			}
-			putchar('\n');
-		}
+			}
 	}
-	return (0);
+	putchar('\n');
+			return (0);
 }
