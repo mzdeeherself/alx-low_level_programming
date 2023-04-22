@@ -6,17 +6,22 @@
 int main(void)
 {
 	int n;
+	int a;
 
-	for (n = 48; n <= 57; n++)
+	for (n = 48; n <= 56; n++)
 	{
-		putchar(n);
-		if (n == 57)
+		if (a > n)
 		{
-			continue;
+			putchar(n);
+			putchar(a);
+			if (n != 56 || a != 57)
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			putchar('\n');
 		}
-		putchar(',');
-		putchar(' ');
 	}
-	putchar('\n');
 	return (0);
 }
+
