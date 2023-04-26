@@ -1,9 +1,9 @@
-#include <unistd.h>
 #include "main.h"
+#include <unistd.h>
 /**
 *main - Print Putchar
-*Return: Always 0 
-* On error, -1 is returned, and errno is set appropriately.
+*Return: Always 0
+*On error, -1 is returned, and errno is set appropriately.
 */
 int main(void)
 {
