@@ -1,8 +1,8 @@
 #include "main.h"
 /**
-* main - prints positive or negatie number
+* positive_or_negative - prints positive or negatie number
 * @i: integer entered
-* Return: Always 0 (Success)
+* Return: nothing
 */
 
 void positive_or_negative(int i)
