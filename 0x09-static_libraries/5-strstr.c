@@ -1,18 +1,26 @@
 #include "main.h"
 /**
-*_isalpha - checks for alphabetic character
-*@c: The character to print
-*Return: Always 0 (Success)
-*/
-int _isalpha(int c)
+ * _strstr - Entry point
+ * @haystack: input
+ * @needle: input
+ * Return: Always 0 (Success)
+ */
+char *_strstr(char *haystack, char *needle)
 {
-	if ((c >= 97 && c <= 122) || (c >= 65 && c <= 90))
+	for (; *haystack != '\0'; haystack++)
 	{
-		return (1);
+		char *l = haystack;
+		char *p = needle;
+
+		while (*l == *p && *p != '\0')
+		{
+			l++;
+			p++;
+		}
+
+		if (*p == '\0')
+			return (haystack);
 	}
-	else
-	{
-		return (0);
-	}
-	_putchar('\n');
+
+	return (0);
 }
