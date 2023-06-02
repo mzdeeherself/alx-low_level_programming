@@ -4,16 +4,17 @@
 /**
 * free_list - frees linkeed lists.
 * @head: fress  list_t
- */
+*/
 
 void free_list(list_t *head)
 {
-	list_t *new;
+	list_t *temp;
 
-	while ((new = head) != NULL)
+	while (head)
 	{
-		free(new);
-		head = head->next;
-		free(new);
+		temp = head->next;
+		free(head->str);
+		free(head);
+		head = temp;
 	}
 }
